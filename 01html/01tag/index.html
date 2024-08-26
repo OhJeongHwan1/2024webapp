@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      body div {
+        background-color: pink;
+        margin: 10px;
+      }
+      body > div {
+        background-color: skyblue;
+      }
+      h1 {
+        color: red;
+      }
+      .test1 {
+        background-color: skyblue;
+      }
+      #test2 {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <b>CSS 우선 순위</b>
+    <p>* < tag(1) < class(10) < id(100) < inline style < !important</p>
+    <h1 class="test1">test1</h1>
+    <h1 id="test2" style="background-color: blue">test2</h1>
+    <style></style>
+    <h1>로고</h1>
+    <h2>title2</h2>
+    <h4>test</h4>
+    test/ 기본 16px
+    <p>em 사이즈는 body 에서 어떻게 설정하느 냐에 따라 달라짐.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus quam
+      delectus molestias nemo nihil, accusantium debitis omnis reprehenderit
+      quod tempora.
+    </p>
+    <address>주소</address>
+    <hr />
+    <div>
+      <div>Lorem, ipsum.</div>
+      <div>Expedita, eius!</div>
+      <div>Provident, vero.</div>
+    </div>
+    <ul>
+      <li>
+        menu1
+        <ul class="submenu">
+          <li><a href="#">submenu1</a></li>
+          <li><a href="#">submenu2</a></li>
+          <li><a href="#">submenu3</a></li>
+          <li><a href="#">submenu4</a></li>
+          <li><a href="#">submenu5</a></li>
+        </ul>
+      </li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+      <li>menu5</li>
+    </ul>
+    <ol>
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+      <li>menu5</li>
+    </ol>
+    <a href="#">test</a>
+    <img
+      src="	https://ssl.pstatic.net/melona/libs/1508/1508017/64f4ac9afd6a375e7025_20240823112815274.jpg"
+      width="300pz"
+    />
+    <span>안녕</span>
+    <div style="width: 300px">
+      <div>test</div>
+      <p>
+        Lorem ipsum dolor
+        <span style="color: red"
+          >sit amet consectetur adipisicing elit. Reprehenderit, error explicabo
+          placeat sequi</span
+        >
+        dolores est ratione eius labore dolor ex praesentium eaque odio possimus
+        dolore culpa laborum quos accusantium nemo.
+      </p>
+    </div>
+    <script></script>
+  </body>
+</html>
