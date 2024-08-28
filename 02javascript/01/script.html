@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="alert('test')">클릭</button>
+    <script>
+      document.write("test");
+      console.log("hello");
+      document.write("<br/>");
+      var day;
+      var week = new Date().getDay();
+      console.log(week);
+
+      switch (week) {
+        case 0:
+          day = "일요일";
+          break;
+        case 1:
+          day = "월요일";
+          break;
+        case 2:
+          day = "화요일";
+          break;
+        case 3:
+          day = "수요일";
+          break;
+        case 4:
+          day = "목요일";
+          break;
+        case 5:
+          day = "금요일";
+          break;
+        case 6:
+          day = "토요일";
+          break;
+        default:
+          day = "없는 요일";
+      }
+      document.write(`오늘은<b> ${day}</b>입니다.`);
+
+      var city = ["서울", "부산", "대구"];
+
+      function printA(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          document.write(`<br>${arr[i]}`);
+        }
+      }
+
+      printA(city);
+      function printArr(item, i) {
+        document.write("배열 데이터 (" + (i + 1) + "): " + item + "<br>");
+      }
+
+      city.forEach(printArr);
+      var data = [1, 2, 3, 4, 5, 6];
+
+      function mapArr(value) {
+        return value * value;
+      }
+
+      var mapData = data.map(mapArr);
+      document.write(mapData);
+    </script>
+
+    <p id="var1"></p>
+    <p id="var2" class="var2"></p>
+    <p id="var3" class="var2"></p>
+
+    <script>
+      var car = {
+        name: "sonata",
+        speed: 100,
+        color: "white",
+      };
+      document.getElementById("var1").innerHTML = car.name;
+      //   $("#var1").html(car.speed); // jquery 방식
+      document.getElementsByClassName("var2")[0].innerHTML = car.speed;
+    </script>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        transition: 0.3s;
+      }
+    </style>
+    <div class="box"></div>
+    <button onclick="boxChange()">눌러보세용</button>
+    <script>
+      function boxChange() {
+        if (
+          document.getElementsByClassName("box")[0].style.backgroundColor ===
+          "red"
+        ) {
+          document.getElementsByClassName("box")[0].style.backgroundColor =
+            "skyblue";
+          document.getElementsByClassName("box")[0].style.width = "100px";
+          document.getElementsByClassName("box")[0].style.height = "100px";
+          document.getElementsByClassName("box")[0].style.opacity = 1;
+        } else {
+          document.getElementsByClassName("box")[0].style.backgroundColor =
+            "red";
+          document.getElementsByClassName("box")[0].style.width = "200px";
+          document.getElementsByClassName("box")[0].style.height = "150px";
+          document.getElementsByClassName("box")[0].style.opacity = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

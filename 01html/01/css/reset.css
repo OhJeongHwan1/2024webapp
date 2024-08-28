@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
