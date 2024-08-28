@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>넷마블 문화 재단</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
@@ -13,28 +13,96 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bxSlider -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css"
+      integrity="sha512-rV4fiystTwIvs71MLqeLbKbzosmgDS7VU5Xqk1IwFitAM+Aa9x/8Xil4CW+9DjOvVle2iqg4Ncagsbgu2MWxKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+      integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="hd">
       <div class="container menuWrap">
         <!-- w1360-->
-        <h1>logo</h1>
+        <h1>넷마블문화재단</h1>
         <nav class="gnb">
           <ul>
-            <li><a href="#">menu1</a></li>
-            <li><a href="#">menu2</a></li>
-            <li><a href="#">menu3</a></li>
-            <li><a href="#">menu4</a></li>
-            <li><a href="#">menu5</a></li>
+            <li><a href="#" class="menu">재단소개</a></li>
+            <li><a href="#" class="menu">재단활동</a></li>
+            <li><a href="#" class="menu">재단소식</a></li>
           </ul>
         </nav>
-        <ul class="sns">
+        <!-- <ul class="sns">
           <li><i class="fa-brands fa-facebook-f"></i></li>
           <li><i class="fa-brands fa-twitter"></i></li>
-        </ul>
+        </ul> -->
       </div>
     </header>
-    <div class="visual bg-sky"></div>
+    <div class="visual">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide item img1">
+            <div class="titleWrap">
+              <h1>게임 소통 학교</h1>
+              <h3>게임으로 소통하고 게임으로 가까워지는 가족</h3>
+            </div>
+          </div>
+          <div class="swiper-slide item img2">
+            <div class="titleWrap">
+              <h1>전국 장애학생 e페스티벌</h1>
+              <h3>게임 안에서 하나 되는 모두의 축제</h3>
+            </div>
+          </div>
+          <div class="swiper-slide item img3">
+            <div class="titleWrap">
+              <h1>견학 프로그램</h1>
+              <h3>나의 게임 산업 탐방기</h3>
+            </div>
+          </div>
+          <div class="swiper-slide item img4">
+            <div class="titleWrap">
+              <h1>게임 아카데미</h1>
+              <h3>미래에 꿈 게임에 담다</h3>
+            </div>
+          </div>
+          <div class="swiper-slide item img5">
+            <div class="titleWrap">
+              <h1>어깨동무문고</h1>
+              <h3>다름을 이해하는 모두의 동화</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container introduce">
+      <div class="top">
+        <p>문화를 만들고 인재를 키우고 <br />마음을 나눕니다</p>
+      </div>
+      <div class="bottom">
+        <p>
+          넷마블문화재단은 문화적 가치 확산을 통해 우리 사회의 미래 경쟁력을
+          높여 가고자 <br />
+          다양한 공익 활동을 전개해 나가고 있습니다.
+        </p>
+      </div>
+    </div>
     <div class="container banner">
       <div class="card">
         <div class="imgWrap">
@@ -50,7 +118,9 @@
       </div>
       <div class="card">
         <div class="imgWrap">
-          <img src="./images/photo2.png" />
+          <img
+            src="https://sgimage.netmarble.com/mobile/game/foundation/brand/v2/img/link02.b7f7bba.jpg"
+          />
         </div>
         <div class="card-text">
           <h3>Lorem, ipsum dolor.</h3>
@@ -62,7 +132,9 @@
       </div>
       <div class="card">
         <div class="imgWrap">
-          <img src="./images/photo2.png" />
+          <img
+            src="https://sgimage.netmarble.com/mobile/game/foundation/brand/v2/img/link03.73d78ef.jpg"
+          />
         </div>
         <div class="card-text">
           <h3>Lorem, ipsum dolor.</h3>
@@ -74,6 +146,72 @@
       </div>
     </div>
 
-    <div class="top"></div>
+    <div class="container last">
+      <div class="text">
+        우리는 문화적 가치를 확산하여 우리 사회의<br />
+        미래 경쟁력을 높여갑니다
+      </div>
+      <div class="img"></div>
+    </div>
+
+    <footer class="bg-gray">
+      <div class="container">여기서부터는 하단입니다.</div>
+    </footer>
+
+    <!-- <div class="top"></div> -->
+    <script src="./js/jquery.min.js"></script>
+
+    <script src="./js/jquery.min.js"></script>
+    <!-- bxSlider -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"
+      integrity="sha512-LaBO0tZh1+6Ebk+EnHt/WsGM0UnmkCXfQ1rfhGmpa5MXUdslNuSSELBRcteHKz4k4ny+Op10Ax2fPoTNq+VcUg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- swiper -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // $(document).ready(function () {
+      //   $(".slide").bxSlider({
+      //     auto: true,
+      //     speed: 1000,
+      //     controls: false,
+      //   });
+      // }); // 만약 앞에서 실행해야 하는 경우 ready 하고 함수 내에서 실행시켜 줘야 함.
+      var swiper = new Swiper(".swiper", {
+        speed: 600,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+
+      window.addEventListener("scroll", function () {
+        const scrollPosition = window.scrollY; // 현재 스크롤 위치
+        const target = document.querySelector(".hd");
+        const target2 = document.getElementsByClassName("menu");
+        const STANDARD = 300;
+
+        if (scrollPosition > STANDARD) {
+          target.style.color = "black";
+          target.style.backgroundColor = "white";
+          for (let i = 0; i < target2.length; i++)
+            target2[i].style.color = "black";
+        } else {
+          target.style.color = "white";
+          target.style.backgroundColor = "transparent";
+          for (let i = 0; i < target2.length; i++)
+            target2[i].style.color = "white";
+        }
+      });
+    </script>
   </body>
 </html>

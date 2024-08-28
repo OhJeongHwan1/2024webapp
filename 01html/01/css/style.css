@@ -1,11 +1,12 @@
 @charset "utf-8";
 
 .bg-gray {
-  background-color: #ddd !important;
+  background-color: #f2f2f2 !important;
 }
 
 body {
   height: 300vh;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .bg-orange {
@@ -25,8 +26,18 @@ body {
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   position: fixed;
   width: 100%;
-  background-color: white;
+  background-color: transparent;
   z-index: 9999;
+  color: white;
+  transition: 0.5s;
+}
+
+.hd:hover {
+  background-color: white !important;
+  color: black !important;
+}
+.hd:hover .menuWrap .gnb a {
+  color: black !important;
 }
 .menuWrap {
   display: flex;
@@ -48,6 +59,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 20px;
 }
 .menuWrap .gnb a:hover {
   font-weight: bold;
@@ -74,10 +87,13 @@ body {
 .visual {
   min-height: 400px;
   height: 100vh;
-  margin-bottom: 50px;
+  max-width: 2000px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
-.top {
+/* .top {
   width: 100px;
   height: 100px;
   position: fixed;
@@ -85,12 +101,13 @@ body {
   bottom: 10px;
   background-color: red;
   border-radius: 50%;
-}
+} */
 
 .banner {
   display: flex;
   /* background-color: orange; */
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 
 .banner .card {
@@ -111,4 +128,101 @@ body {
   transform: scale(1.01) translate(-20px, -20px);
   box-shadow: 30px 30px 20px rgb(0, 0, 0, 0.3);
   cursor: pointer;
+}
+
+.swiper-wrapper .item {
+  height: 100vh;
+  min-height: 400px;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.img1 {
+  background-image: url(https://sgimage.netmarble.com/images/netmarble/foundation/20210208/1612777894232/banner01.jpg);
+  background-repeat: no-repeat;
+}
+.img2 {
+  background-image: url(https://sgimage.netmarble.com/images/netmarble/foundation/20210208/1612777971000/banner02.jpg);
+  background-repeat: no-repeat;
+}
+.img3 {
+  background-image: url(https://sgimage.netmarble.com/images/netmarble/foundation/20230601/sj271685610125602.jpg);
+  background-repeat: no-repeat;
+}
+.img4 {
+  background-image: url(https://sgimage.netmarble.com/images/netmarble/foundation/20210208/1612778048556/banner04.jpg);
+  background-repeat: no-repeat;
+}
+.img5 {
+  background-image: url(https://sgimage.netmarble.com/images/netmarble/foundation/20210303/zuhg1614749942851.jpg);
+  background-repeat: no-repeat;
+}
+
+.titleWrap {
+  position: relative;
+  color: white;
+  text-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+  top: 400px;
+  left: 150px;
+  width: 450px;
+}
+.titleWrap h1 {
+  font-size: 72px;
+}
+
+.titleWrap h3 {
+  font-size: 24px;
+}
+
+.introduce {
+  height: 195px;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.introduce .top {
+  font-size: 44px;
+  font-weight: bold;
+  position: relative;
+}
+
+.introduce .top:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 70px;
+  height: 5px;
+  background-color: #ffd44a;
+}
+
+.introduce .bottom {
+  font-size: 20px;
+  color: #191919;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.last {
+  position: relative;
+  margin-bottom: 280px;
+}
+
+.last .text {
+  font-weight: bold;
+  font-size: 28px;
+  padding: 102px 104px;
+  background-color: #ffd44a;
+  height: 338px;
+  width: 1114px;
+}
+
+.last .img {
+  width: 592px;
+  height: 360px;
+  background-image: url(https://sgimage.netmarble.com/mobile/game/foundation/brand/v2/img/purpose.e6f7b36.jpg);
+  position: absolute;
+  right: 0px;
+  bottom: -125px;
 }
