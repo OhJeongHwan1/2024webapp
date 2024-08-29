@@ -64,3 +64,8 @@
 .service .card img {
   height: 200px;
 }
+
+/* custom */
+.customer .item {
+  background-color: skyblue;
+}
