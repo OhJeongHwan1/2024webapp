@@ -107,7 +107,7 @@ body {
   display: flex;
   /* background-color: orange; */
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 160px;
 }
 
 .banner .card {
@@ -305,6 +305,13 @@ body {
   min-width: 360px;
   max-width: 360px;
   height: 466px;
+  transition: 0.4s;
+}
+
+.noticeWrap .card:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.2);
+  transform: translate(0, -10px);
 }
 
 .noticeWrap .card img {
