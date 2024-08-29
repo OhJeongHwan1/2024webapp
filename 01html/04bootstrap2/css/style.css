@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+:root {
+  --primary-color-1: pink;
+  --primary-color-2: #aaa;
+  --primary-color-3: #efefef;
+  --text-shadow-1: 0 8px 10px rgb(0, 0, 0, 0.3);
+  --shadow-1: rgb(0, 0, 0, 0.2);
+}
+
+.testWrap {
+  background-color: var(--primary-color-1);
+  box-shadow: 0 10px 10px var(--shadow-1);
+}
+
+.visualWrap {
+  background: url(../images/slider-bg.svg) no-repeat center;
+  background-size: cover;
+}
+
+.shadow {
+  box-shadow: 0 0px 10px var(--shadow-1) !important;
+}
+
+.btn-shadow {
+  box-shadow: 0 5px 10px var(--shadow-1) !important;
+}
+
+.conTitle {
+  position: relative;
+
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%); /* 정렬하는 방법 중 하나 */
+}
+
+.conTitle::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color-2);
+  border-radius: 50%;
+  position: absolute;
+  left: -15px;
+  top: -5px;
+  /* width: 105px;
+  height: 3px;
+  background-color: var(--primary-color-2);
+  margin: 10px auto; */
+}
+
+.service .card {
+  background-color: var(--primary-color-3);
+  border: 0 none;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.service .card:hover {
+  transform: translate(-20px, -20px) scale(1.1);
+  box-shadow: 10px 10px 10px var(--shadow-1);
+}
+
+.service .card img {
+  height: 200px;
+}
