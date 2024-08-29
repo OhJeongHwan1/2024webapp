@@ -17,13 +17,16 @@ body {
   background-color: skyblue !important;
 }
 
+.bg-bl {
+  background-color: black !important;
+}
+
 .container {
   width: 1280px;
   margin: 0 auto;
 }
 
 .hd {
-  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   position: fixed;
   width: 100%;
   background-color: transparent;
@@ -310,8 +313,8 @@ body {
 
 .noticeWrap .card:hover {
   cursor: pointer;
-  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.2);
-  transform: translate(0, -10px);
+  box-shadow: 0 10px 15px rgb(0, 0, 0, 0.3);
+  transform: translate(0, -20px);
 }
 
 .noticeWrap .card img {
@@ -323,4 +326,49 @@ body {
   font-weight: 500;
   font-size: 21px;
   padding: 32px;
+}
+
+/* ft */
+
+.ft {
+  height: 292px;
+  padding: 64px 0;
+  color: white;
+  position: relative;
+}
+
+.ft .title {
+  font-size: 16p;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.ft .address {
+  font-size: 11px;
+  color: #bdbdbd;
+  margin-bottom: 46px;
+}
+
+.ft .doc {
+  font-size: 12px;
+  color: #bbbbbb;
+}
+
+.sns {
+  display: flex;
+  gap: 20px;
+  color: #bdbdbd;
+  position: absolute;
+  top: 190px;
+  left: 1100px;
+}
+
+.sns li {
+  cursor: pointer;
+  border: 1px solid #bdbdbd;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
 }
