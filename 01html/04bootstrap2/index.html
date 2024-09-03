@@ -25,11 +25,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css"
+      integrity="sha512-lvaVbvmbHhG8cmfivxLRhemYlTT60Ly9Cc35USrpi8/m+Lf/f/T8x9kEIQq47cRj1VQIFuxTxxCcvqiQeQSHjQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+    <nav
+      class="header navbar navbar-expand-lg bg-body-tertiary shadow fixed-top"
+    >
       <div class="container">
         <a class="navbar-brand" href="#"
           ><img src="./images/logo.svg" style="height: 50px" class="img-fluid"
@@ -151,44 +167,282 @@
         </div>
       </div>
     </div>
-    <div class="container customer mb-5">
-      <h2 class="text-center conTitle">CUSTOMER</h2>
-      <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
-      <div class="owl-carousel owl-theme">
-        <div class="item rounded">
-          <div class="sliderView d-flex gap-3 p-3">
-            <img
-              src="./images/user.svg"
-              class="img-fluid"
-              style="width: 150px"
-            />
-            <div>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <div class="bg-info py-5 mb-5">
+      <div class="container customer">
+        <h2 class="text-center conTitle">CUSTOMER</h2>
+        <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
+        <div class="owl-carousel owl-theme">
+          <div class="item rounded">
+            <div class="sliderView d-flex gap-3 p-3">
               <img
-                src="./images/quote.svg"
-                alt=""
-                style="width: 30px"
-                class="d-block ms-auto"
+                src="./images/user.svg"
+                class="img-fluid"
+                style="width: 150px"
               />
+              <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <img
+                  src="./images/quote.svg"
+                  alt=""
+                  style="width: 30px"
+                  class="d-block ms-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="container portfolio mb-5">
+      <h2 class="text-center conTitle">PORTFOLIO</h2>
+      <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
+      <div class="btn-group mb-3">
+        <button data-filter="" class="btn btn-primary active" id="btn">
+          ALL
+        </button>
+        <button data-filter=".web" class="btn btn-primary">WEB</button>
+        <button data-filter=".vue" class="btn btn-primary">VUE</button>
+        <button data-filter=".react" class="btn btn-primary">REACT</button>
+        <button data-filter=".jpa" class="btn btn-primary">JPA</button>
+      </div>
+      <div class="row view">
+        <div class="col-6 col-lg-3 element-item web mb-3">
+          <a href="./images/servicos/1.jpg" class="popup-link">
+            <img
+              src="./images/servicos/1.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 element-item vue mb-3">
+          <a href="./images/servicos/2.jpg" class="popup-link">
+            <img
+              src="./images/servicos/2.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 element-item vue mb-3">
+          <a href="./images/servicos/3.jpg" class="popup-link">
+            <img
+              src="./images/servicos/3.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 element-item react mb-3">
+          <a href="./images/servicos/4.jpg" class="popup-link">
+            <img
+              src="./images/servicos/4.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 element-item web mb-3">
+          <a href="./images/servicos/5.jpg" class="popup-link">
+            <img
+              src="./images/servicos/5.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 element-item react mb-3">
+          <a href="./images/servicos/6.jpg" class="popup-link">
+            <img
+              src="./images/servicos/6.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 element-item jpa mb-3">
+          <a href="./images/servicos/7.jpg" class="popup-link">
+            <img
+              src="./images/servicos/7.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 element-item react mb-3">
+          <a href="./images/servicos/8.jpg" class="popup-link">
+            <img
+              src="./images/servicos/8.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 element-item jpa mb-3">
+          <a href="./images/servicos/9.jpg" class="popup-link">
+            <img
+              src="./images/servicos/9.jpg"
+              alt=""
+              class="img-fluid rounded"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="online py-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6 offset-md-3 text-white text-center">
+            <h2 class="">CONTACT US</h2>
+            <p class="">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptas, minus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer py-5">
+      <div class="container py-5 px-5">
+        <div class="row mb-5">
+          <div class="col-lg-3 mb-5">
+            <img src="./images/udacity-logo.png" alt="" style="width: 50px" />
+          </div>
+          <div class="col-6 col-lg mb-3 mb-md-0">
+            <h4>Company</h4>
+            <ul>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg">
+            <h4>Product</h4>
+            <ul>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg">
+            <h4>Community</h4>
+            <ul>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg">
+            <h4>Company</h4>
+            <ul>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+              <li>menu1</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="row mb-5">
+          <div class="col-md-6 mb-3">
+            <ul class="d-flex justify-content-center justify-content-md-start">
+              <li><a href="javascript:void(0)">Privacy</a></li>
+              <li class="px-2">/</li>
+              <li><a href="javascript:void(0)">Teams</a></li>
+              <li class="px-2">/</li>
+              <li><a href="#!">Site map</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul
+              class="d-flex justify-content-center gap-3 justify-content-md-end"
+            >
+              <li>
+                <a href="#!"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li><i class="fa-brands fa-google"></i></li>
+              <li><i class="fa-brands fa-github"></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2 text-center">
+            <p class="small">
+              Lorem ipsum dolor sit.<br />
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
+              aperiam!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jquery -->
     <script src="./js/jquery.min.js"></script>
+    <!-- bootstrap -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
       integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- owl-carousel -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
       integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- isotope -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- popup -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"
+      integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script>
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        // console.log(scroll);
+
+        if (scroll > 250) {
+          $(".header").addClass("fixed-top");
+        } else {
+          $(".header").removeClass("fixed-top");
+        }
+      });
+
+      const btns = $(".portfolio .btn-group button");
+      btns.click(function () {
+        let i = $(this).index();
+        // console.log(i);
+        btns.removeClass("active");
+        btns.eq(i).addClass("active");
+
+        let selector = btns.eq(i).attr("data-filter");
+        // console.log(selector);
+        $(".portfolio .view").isotope({
+          filter: selector,
+        });
+      });
+
+      $(".view .popup-link").magnificPopup({ type: "image" });
+
+      window.onload = function () {
+        $(".portfolio #btn").trigger("click");
+      };
+
       $(".owl-carousel").owlCarousel({
         loop: true,
         autoPlay: true,
@@ -198,11 +452,26 @@
           0: {
             items: 1,
           },
+          600: {
+            items: 2,
+          },
           900: {
+            items: 3,
+          },
+          1200: {
+            items: 4,
+          },
+          1400: {
             items: 5,
           },
         },
       });
+
+      // document.getElementsByClassName("grid")[0].style.display = "none"; // 배열처럼 가지고 옴. 그렇기 위해 지정해줘야 함
+      // document.querySelector(".grid")  // 무조건 첫번째 요소임.
+
+      // jquery(".grid");
+      // $(".grid").css("display", "none"); // j 쿼리 사용 방식
     </script>
   </body>
 </html>
