@@ -1,39 +1,41 @@
 <template>
-  <div
-    id="userWrap"
-    v-for="(item, i) in $store.state.userData"
-    :key="i"
-    class="d-flex gap-2 shadow rounded p-3 mb-2 bg-white"
-  >
-    <div class="avata">
-      <img :src="item.image" alt="" />
-    </div>
-    <div class="infoArea">
-      <h5 class="mb-0">
-        {{ item.userid }}
-      </h5>
-      <p class="mb-0">{{ item.username }}</p>
-    </div>
+  <div class="listWrap" style="height: 360px">
     <div
-      class="buttonWrap d-flex flex-column gap-1 align-items-center justify-content-center"
+      id="userWrap"
+      v-for="(item, i) in $store.state.userData"
+      :key="i"
+      class="d-flex gap-2 shadow rounded p-3 mb-2 bg-white"
     >
-      <div class="btn btn-primary btn-sm" @click="modalOpen(item)">수정</div>
+      <div class="avata">
+        <img :src="item.image" alt="" />
+      </div>
+      <div class="infoArea">
+        <h5 class="mb-0">
+          {{ item.userid }}
+        </h5>
+        <p class="mb-0">{{ item.username }}</p>
+      </div>
       <div
-        class="btn btn-danger btn-sm"
-        @click="deleteUser(item.userid, item.username)"
+        class="buttonWrap d-flex flex-column gap-1 align-items-center justify-content-center"
       >
-        삭제
+        <div class="btn btn-primary btn-sm" @click="modalOpen(item)">수정</div>
+        <div
+          class="btn btn-danger btn-sm"
+          @click="deleteUser(item.userid, item.username)"
+        >
+          삭제
+        </div>
       </div>
     </div>
+    <div class="none" v-if="$store.state.userData.length === 0">
+      유저가 없습니다.
+    </div>
+    <ModalView
+      v-if="$store.state.selectedUser"
+      :isModal="isModal"
+      @closeModal="modalClose"
+    />
   </div>
-  <div class="none" v-if="$store.state.userData.length === 0">
-    유저가 없습니다.
-  </div>
-  <ModalView
-    v-if="$store.state.selectedUser"
-    :isModal="isModal"
-    @closeModal="modalClose"
-  />
 </template>
 
 <script setup>
@@ -59,6 +61,9 @@ function modalClose() {
 </script>
 
 <style lang="scss" scoped>
+.listWrap {
+  overflow-y: auto;
+}
 #userWrap {
   position: relative;
   .buttonWrap {

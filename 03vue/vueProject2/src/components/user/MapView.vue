@@ -1,12 +1,12 @@
 <template>
   <div class="col-md-8">
-    <div id="map" style="width: 100%; height: 400px"></div>
+    <div id="map" style="width: 100%; height: 500px"></div>
     <p id="result"></p>
   </div>
   <div
     id="areaList"
     class="bg-white rounded col-md-4 d-flex flex-column py-2"
-    style="height: 400px"
+    style="height: 500px"
   >
     <div v-if="inMaps.value">
       <div

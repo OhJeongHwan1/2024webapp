@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md bg-body-tertiary">
+  <nav class="navbar navbar-expand-md bg-body-tertiary shadow">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img
@@ -25,7 +25,10 @@
             <router-link to="/" class="nav-link">HOME</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/user" class="nav-link">USER&CAFE</router-link>
+            <router-link to="/cafeMap" class="nav-link">CAFE</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/user" class="nav-link">USER</router-link>
           </li>
         </ul>
       </div>

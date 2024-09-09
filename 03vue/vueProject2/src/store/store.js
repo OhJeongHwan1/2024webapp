@@ -43,5 +43,19 @@ export default createStore({
     setSelectedUser(state, payload) {
       state.selectedUser = payload;
     },
+    editUserData(state, payload) {
+      for (let i = 0; i < state.userData.length; i++) {
+        if (state.userData[i].userid === state.selectedUser.userid) {
+          state.userData[i].userid = payload.userid;
+          state.userData[i].password = payload.password;
+          state.userData[i].username = payload.username;
+          state.userData[i].addr = payload.addr;
+          state.userData[i].image = payload.image;
+          state.userData[i].latitude = payload.latitude;
+          state.userData[i].longitude = payload.longitude;
+          break;
+        }
+      }
+    },
   },
 });

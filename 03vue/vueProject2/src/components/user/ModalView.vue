@@ -55,20 +55,11 @@
         </div>
       </div>
 
-      <div class="input-group mb-3">
-        <input
-          type="file"
-          class="form-control"
-          id="fileform"
-          @change="handleImage"
-          accept="imgae/*"
-        />
-        <label class="input-group-text" for="fileform">Upload</label>
-      </div>
-
       <div class="buttonWrap d-flex gap-2">
-        <button class="btn btn-sm btn-success">수정</button>
-        <button class="btn btn-sm btn-danger" v-on:click="$emit('closeModal')">
+        <button class="btn btn-sm btn-success" v-on:click="editUserData">
+          수정
+        </button>
+        <button class="btn btn-sm btn-danger" v-on:click="closeModal">
           닫기
         </button>
       </div>
@@ -78,8 +69,9 @@
 
 <script setup>
 import { useStore } from "vuex";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 const store = useStore();
+const emit = defineEmits(["closeModal"]);
 
 const editData = ref({
   userid: store.state.selectedUser.userid,
@@ -94,6 +86,32 @@ const editData = ref({
 const props = defineProps({
   isModal: Boolean,
 });
+
+// 선택된 유저가 바뀔 때마다 바뀛수 있도록 수정하기
+watch(
+  () => store.state.selectedUser,
+  () => {
+    editData.value.userid = store.state.selectedUser.userid;
+    editData.value.password = store.state.selectedUser.password;
+    editData.value.username = store.state.selectedUser.username;
+    editData.value.addr = store.state.selectedUser.addr;
+    editData.value.image = store.state.selectedUser.image;
+    editData.value.latitude = store.state.selectedUser.latitude;
+    editData.value.longitude = store.state.selectedUser.longitude;
+  },
+  { deep: true }
+);
+
+function editUserData() {
+  if (confirm("정말 수정하시겠습니까?")) {
+    store.commit("editUserData", editData.value);
+    closeModal();
+  }
+}
+
+function closeModal() {
+  emit("closeModal");
+}
 </script>
 
 <style lang="scss" scoped>
