@@ -1,7 +1,13 @@
 <template>
   <nav class="navbar navbar-expand-md bg-body-tertiary">
     <div class="container">
-      <a class="navbar-brand" href="#">logo</a>
+      <a class="navbar-brand" href="#">
+        <img
+          width="50px"
+          src="https://www.tomntoms.com/assets/logo-ec2c5c29.png"
+          alt=""
+        />
+      </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -19,7 +25,7 @@
             <router-link to="/" class="nav-link">HOME</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/user" class="nav-link">User</router-link>
+            <router-link to="/user" class="nav-link">USER&CAFE</router-link>
           </li>
         </ul>
       </div>

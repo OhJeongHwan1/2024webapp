@@ -7,4 +7,9 @@
 import NavbarView from "./components/NavbarView.vue";
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.none {
+  color: #888;
+  font-style: italic;
+}
+</style>
