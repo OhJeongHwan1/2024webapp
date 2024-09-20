@@ -1,0 +1,50 @@
+import React, { useEffect, useState } from "react";
+import { getOne } from "../../api/todoApi";
+import useCustomMove from "../../hooks/useCustomMove";
+
+const initState = {
+  tno: 0,
+  title: "",
+  writer: "",
+  dueDate: null,
+  complete: false,
+};
+
+function ReadComp({ tno }) {
+  const [todo, setTodo] = useState(initState);
+  const { moveToList } = useCustomMove();
+
+  useEffect(() => {
+    getOne(tno).then((res) => setTodo(res));
+  }, [tno]);
+  return (
+    <div>
+      {makeDiv("NUM", todo.tno)}
+      {makeDiv("TITLE", todo.title)}
+      {makeDiv("WRITER", todo.writer)}
+      {makeDiv("DUEDATE", todo.dueDate)}
+      <div className="flex justify-end gap-2">
+        <button
+          className="bg-red-300 rounded py-2 px-4 text-white"
+          onClick={() => moveToList()}
+        >
+          돌아가기
+        </button>
+        <button className="bg-blue-300 rounded py-2 px-4 text-white">
+          수정
+        </button>
+      </div>
+    </div>
+  );
+}
+
+const makeDiv = (title, value) => {
+  return (
+    <div className="flex gap-1">
+      <div className="w-3/12 font-extrabold">{title}</div>
+      <div className="w-9/12">{value}</div>
+    </div>
+  );
+};
+
+export default ReadComp;
